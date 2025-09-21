@@ -71,12 +71,15 @@ jobs:
             <servers>
               <server>
                 <id>anypoint-platform</id>
-                <username>${{ secrets.ANYPOINT_PLATFORM_USERNAME }}</username>
-                <password>${{ secrets.ANYPOINT_PLATFORM_PASSWORD }}</password>
+                <username>${ANYPOINT_USERNAME}</username>
+                <password>${ANYPOINT_PASSWORD}</password>
               </server>
             </servers>
           </settings>
           EOF
+        env:
+          ANYPOINT_USERNAME: ${{ secrets.ANYPOINT_PLATFORM_USERNAME }}
+          ANYPOINT_PASSWORD: ${{ secrets.ANYPOINT_PLATFORM_PASSWORD }}
 
       - name: Deploy to Sandbox
         run: |
