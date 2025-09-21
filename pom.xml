@@ -33,10 +33,9 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.9.0</muleVersion>
-						<username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
+						<server>anypoint-platform</server>
 						<environment>Sandbox</environment>
-						<applicationName>${appName}</applicationName>
+						<applicationName>firstappcicd</applicationName>
 						<businessGroup>HM1</businessGroup>
 						<workerType>MICRO</workerType>
 						<workers>1</workers>

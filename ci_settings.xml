@@ -1,0 +1,20 @@
+<settings>
+      <servers>
+        <server>
+            <id>anypoint-platform</id>
+            <username>${anypoint.username}</username>
+            <password>${anypoint.password}</password>
+        </server>
+        <server>
+            <id>github-maven</id>
+			<configuration>
+				<httpHeaders>
+					<property>
+						<name>Job-Token</name>
+						<value>${env.CI_JOB_TOKEN}</value>
+					</property>
+				</httpHeaders>
+			</configuration>
+        </server>
+      </servers>
+</settings>
