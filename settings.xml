@@ -2,8 +2,8 @@
       <servers>
         <server>
             <id>anypoint-platform</id>
-            <username>MulesoftHM2</username>
-            <password>Mulesoft@1234</password>
+            <username>${env.ANYPOINT_USERNAME}</username>
+            <password>${env.ANYPOINT_PASSWORD}</password>
         </server>
         <server>
             <id>github-maven</id>
