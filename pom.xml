@@ -36,7 +36,7 @@
 						<server>anypoint-platform</server>
 						<environment>Sandbox</environment>
 						<applicationName>firstappcicd</applicationName>
-						<businessGroup>HM1</businessGroup>
+						<businessGroup>Mulesoft</businessGroup>
 						<workerType>MICRO</workerType>
 						<workers>1</workers>
 						<objectStoreV2>true</objectStoreV2>
