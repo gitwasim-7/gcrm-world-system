@@ -14,7 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.9.0</app.runtime>
-		<mule.maven.plugin.version>4.6.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>4.1.0</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -30,17 +30,21 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudHub2Deployment>
+					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
+						<provider>MC</provider>
 						<muleVersion>4.9.0</muleVersion>
+						<releaseChannel>LTS</releaseChannel>
+						<javaVersion>17</javaVersion>
 						<server>anypoint-platform</server>
 						<environment>Sandbox</environment>
 						<applicationName>firstappcicd</applicationName>
 						<businessGroup>Mulesoft</businessGroup>
 						<workerType>MICRO</workerType>
+						<replicas>1</replicas>
 						<workers>1</workers>
 						<objectStoreV2>true</objectStoreV2>
-					</cloudHub2Deployment>
+					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
 		</plugins>
