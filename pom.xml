@@ -37,7 +37,7 @@
 						<releaseChannel>LTS</releaseChannel>
 						<javaVersion>17</javaVersion>
 						<server>anypoint-platform</server>
-						<environment>Sandbox</environment>
+						<target>Sandbox</target>
 						<applicationName>firstappcicd</applicationName>
 						<businessGroup>Mulesoft</businessGroup>
 						<replicas>1</replicas>
