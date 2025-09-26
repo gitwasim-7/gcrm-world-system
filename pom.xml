@@ -40,7 +40,6 @@
 						<environment>Sandbox</environment>
 						<applicationName>firstappcicd</applicationName>
 						<businessGroup>Mulesoft</businessGroup>
-						<workerType>MICRO</workerType>
 						<replicas>1</replicas>
 						<workers>1</workers>
 						<objectStoreV2>true</objectStoreV2>
