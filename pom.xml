@@ -42,7 +42,6 @@
 						<businessGroup>Mulesoft</businessGroup>
 						<replicas>1</replicas>
 						<vCores>1</vCores>
-						<objectStoreV2>true</objectStoreV2>
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
