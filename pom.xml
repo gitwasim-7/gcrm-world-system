@@ -41,7 +41,7 @@
 						<applicationName>firstappcicd</applicationName>
 						<businessGroup>Mulesoft</businessGroup>
 						<replicas>1</replicas>
-						<workers>1</workers>
+						<vCores>1</vCores>
 						<objectStoreV2>true</objectStoreV2>
 					</cloudhub2Deployment>
 				</configuration>
