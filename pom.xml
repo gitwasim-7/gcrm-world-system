@@ -38,7 +38,6 @@
 						<releaseChannel>LTS</releaseChannel>
 						<javaVersion>17</javaVersion>
 						<server>anypoint-platform</server>
-						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
 						<applicationName>firstmuleapp</applicationName>
 						<replicas>1</replicas>
