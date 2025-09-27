@@ -43,6 +43,7 @@
 						<applicationName>firstmuleapp</applicationName>
 						<replicas>1</replicas>
 						<vCores>1</vCores>
+						<skipDeploymentVerification>true</skipDeploymentVerification>
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
