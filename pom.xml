@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>firstappcicd</artifactId>
+	<artifactId>firstmuleapp</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
@@ -34,12 +34,13 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 						<provider>MC</provider>
 						<muleVersion>4.9.0</muleVersion>
+						<businessGroupId>25f5b442-d3f3-4910-89c3-fd1f23510d23</businessGroupId>
 						<releaseChannel>LTS</releaseChannel>
 						<javaVersion>17</javaVersion>
 						<server>anypoint-platform</server>
+						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
 						<applicationName>firstmuleapp</applicationName>
-						<businessGroup>Mulesoft</businessGroup>
 						<replicas>1</replicas>
 						<vCores>1</vCores>
 					</cloudhub2Deployment>
