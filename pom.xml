@@ -49,6 +49,7 @@
 						<skipDeploymentVerification>true</skipDeploymentVerification>
 						<deploymentSettings/>
 					</cloudhub2Deployment>
+					<skipExchangeDeployment>true</skipExchangeDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
