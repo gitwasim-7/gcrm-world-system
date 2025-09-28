@@ -1,20 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <settings>
-      <servers>
+    <servers>
         <server>
-            <id>anypoint-platform</id>
-            <username>${env.ANYPOINT_USERNAME}</username>
-            <password>${env.ANYPOINT_PASSWORD}</password>
+            <id>anypoint-exchange-v3</id>
+            <username>MulesoftHM2</username>
+            <password>Mulesoft@1234</password>
         </server>
-        <server>
-            <id>github-maven</id>
-			<configuration>
-				<httpHeaders>
-					<property>
-						<name>Job-Token</name>
-						<value>${env.CI_JOB_TOKEN}</value>
-					</property>
-				</httpHeaders>
-			</configuration>
-        </server>
-      </servers>
+    </servers>
 </settings>

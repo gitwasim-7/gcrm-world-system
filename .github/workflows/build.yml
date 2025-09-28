@@ -50,38 +50,16 @@ jobs:
     steps:    
       - name: Checkout this repo
         uses: actions/checkout@v4
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
+        
+      - name: Set up Java
+        uses: actions/setup-java@v4
         with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: artifacts
-
-      - name: Configure Maven settings.xml
+          distribution: "temurin"
+          java-version: '21'        
+          
+      - name: Deploy to Exchange
+        run: mvn deploy -s settings.xml
+        
+      - name: Deploy to CloudHub
         run: |
-          mkdir -p ~/.m2
-          cat > ~/.m2/settings.xml <<EOF
-          <settings>
-            <servers>
-              <server>
-                <id>anypoint-platform</id>
-                <username>${ANYPOINT_USERNAME}</username>
-                <password>${ANYPOINT_PASSWORD}</password>
-              </server>
-            </servers>
-          </settings>
-          EOF
-        env:
-          ANYPOINT_USERNAME: ${{ secrets.ANYPOINT_PLATFORM_USERNAME }}
-          ANYPOINT_PASSWORD: ${{ secrets.ANYPOINT_PLATFORM_PASSWORD }}
-
-      - name: Deploy to Sandbox
-        run: |
-          artifactName=$(ls *.jar | head -1)
-          mvn mule:deploy -Dmule.artifact=$artifactName -s ~/.m2/settings.xml
+          mvn deploy -DmuleDeploy -Denvironment="${{vars.MULE_ENV}}" -Dsecure_key="${{secrets.MULE_KEY}}" -Dtarget="${{vars.MULE_TARGET}}"  --settings settings.xml        

@@ -33,16 +33,21 @@
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<provider>MC</provider>
+						<environment>${environment}</environment>
+						<target>${target}</target>
 						<muleVersion>4.9.0</muleVersion>
-						<businessGroupId>25f5b442-d3f3-4910-89c3-fd1f23510d23</businessGroupId>
-						<releaseChannel>LTS</releaseChannel>
-						<javaVersion>17</javaVersion>
 						<server>anypoint-platform</server>
-						<target>Cloudhub-US-East-2</target>
 						<applicationName>firstmuleapp</applicationName>
 						<replicas>1</replicas>
-						<vCores>1</vCores>
+						<vCores>0.1</vCores>
+						<properties>
+							<env>${en}</env>
+						</properties>
+						<secureProperties>						
+							<key>${secure_key}</key>
+						</secureProperties>					
 						<skipDeploymentVerification>true</skipDeploymentVerification>
+						<deploymentSettings/>
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
@@ -65,6 +70,12 @@
 	</dependencies>
 
 	<repositories>
+		<repository>
+			<id>Repository</id>
+			<name>Exchange2 Repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/25f5b442-d3f3-4910-89c3-fd1f23510d23/maven</url>
+			<layout>default</layout>
+		</repository>
 		<repository>
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange</name>
@@ -90,5 +101,13 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+	<distributionManagement>
+		<repository>
+			<id>Repository</id>
+			<name>Corporate Repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/25f5b442-d3f3-4910-89c3-fd1f23510d23/maven</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>	
 
 </project>
