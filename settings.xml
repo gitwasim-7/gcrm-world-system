@@ -2,7 +2,7 @@
 <settings>
     <servers>
         <server>
-            <id>anypoint-exchange-v3</id>
+            <id>anypoint-platform</id>
             <username>MulesoftHM2</username>
             <password>Mulesoft@1234</password>
         </server>
